@@ -103,6 +103,7 @@ class MusicLibraryController
     else
       nil
     end
+    binding.pry
   end
 
 end # class end
