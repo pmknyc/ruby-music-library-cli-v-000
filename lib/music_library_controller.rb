@@ -58,8 +58,8 @@ class MusicLibraryController
 
   def list_genres
     #alpha = []
-    Genre.all.sort{|a, b| a = Genre.name, b = Genre.name}.each.with_index do |genre, index|
-      puts "#{index}. #{Genre.name}"
+    Genre.all.sort{|a, b| a = :name, b = :name}.each.with_index do |genre, index|
+      puts "#{index}. #{:name}"
       #alpha << genre.name
     end
     #alpha.sort!.each.with_index(1) do |name, index|
