@@ -98,7 +98,7 @@ class MusicLibraryController
     #else
     #  nil
     end
-    binding.pry
+  #  binding.pry
   end
 
 end # class end
