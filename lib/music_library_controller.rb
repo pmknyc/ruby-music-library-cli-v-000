@@ -46,19 +46,9 @@ class MusicLibraryController
 
   def list_songs
     Song.all.sort_by(&:name).each.with_index(1) do |song, index|
-      self.library << [index, song.artist.name, song.name, song.genre.name]
-        #  end
-        #  self.library.sort!{|a,b| a[1] <=> b[1]}.each.with_index(1) do |song_parts, index|
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
-    self.library
   end
-
-            #alpha.sort!{|a,b| a[1] <=> b[1]}.each.with_index(1) do |song_parts, index|
-            #  list << "#{index}. #{song_parts.join(" - ")}"
-            #  puts "#{index}. #{song_parts.join(" - ")}"
-            #end
-
 
   def list_artists
     Artist.all.sort_by(&:name).each.with_index(1) do |artist, index|
