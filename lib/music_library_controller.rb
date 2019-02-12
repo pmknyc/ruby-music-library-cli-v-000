@@ -72,15 +72,11 @@ class MusicLibraryController
       artist.songs.sort_by(&:name).each.with_index(1) do |song, index|
         puts "#{index}. #{song.name} - #{song.genre.name}"
       end
-    else
-        nil
+    #else
+    #    nil
     end
   end
-        #  alpha.sort!{|a,b| a[0] <=> b[0]}.each.with_index(1) do |song_parts, index|
-        #    list << "#{index}. #{song_parts.join(" - ")}"
-        #    puts "#{index}. #{song_parts.join(" - ")}"
-        #  end
-
+    
   def list_songs_by_genre
     puts "Please enter the name of a genre:"
     input = gets.strip.downcase
@@ -88,8 +84,8 @@ class MusicLibraryController
       genre.songs.sort_by(&:name).each.with_index(1) do |song, index|
         puts "#{index}. #{song.artist.name} - #{song.name}"
       end
-    else
-      nil
+    #else
+    #  nil
     end
   end
 
@@ -99,8 +95,8 @@ class MusicLibraryController
     if (1..Song.all.length).include?(input)
       selection = Song.all.sort_by(&:name)[input-1]
       puts "Playing #{selection.name} by #{selection.artist.name}"
-    else
-      nil
+    #else
+    #  nil
     end
     binding.pry
   end
