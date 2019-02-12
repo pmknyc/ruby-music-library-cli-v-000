@@ -49,8 +49,8 @@ class MusicLibraryController
     end
   end
 
-#  note & compare equivalency in the use of 
-#  #sort_by in list_artists 
+#  note & compare equivalency in the use of
+#  #sort_by in list_artists
 #  #sort in list_genres
   def list_artists
     Artist.all.sort_by(&:name).each.with_index(1) do |artist, index|
