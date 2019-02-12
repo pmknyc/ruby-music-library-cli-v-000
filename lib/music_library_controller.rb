@@ -57,13 +57,12 @@ class MusicLibraryController
   end
 
   def list_genres
-    alpha = []
-    Genre.all.each do |genre|
-      alpha << genre.name
+    #alpha = []
+    Genre.all.sort_by(self.name).each.with_index do |genre, index|
+      puts "#{index}. #{self.name}"
+      #alpha << genre.name
     end
-    alpha.sort!.each.with_index(1) do |name, index|
-      puts "#{index}. #{name}"
-    end
+    #alpha.sort!.each.with_index(1) do |name, index|
   end
 
   def list_songs_by_artist
