@@ -4,12 +4,11 @@ class MusicLibraryController
   # accepts an optional path to the library of MP3 files, defaulting to ./db/mp3s/
   # instantiate a MusicImporter object
 
-  attr_accessor :path, :library
+  attr_accessor :path
 
   def initialize(path="./db/mp3s")
     @path = path
     MusicImporter.new(path).import
-    @library = []
   end
 
     def call
